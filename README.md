@@ -8,9 +8,9 @@ https://kalinkanya.github.io/museum/
 
 ## Этапы работы над проектом:
 
-- [фиксированная вёрстка](museum-fixed.md)
-- [адаптивная вёрстка](museum-adaptive.md)
-- [добавление JavaScript](museum-dom.md)
+- фиксированная вёрстка
+- адаптивная вёрстка
+- добавление JavaScript
 
 ## Ключевые навыки:
 
