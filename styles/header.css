@@ -1,13 +1,21 @@
 .header__container {
   display: flex;
   justify-content: space-between;
-  padding: 60px 0;
+  align-items: center;
+  height: 150px;
 }
 
-.header__logo-group{
+.header__logo-group {
   display: flex;
   align-items: center;
   gap: 25px;
+  transition: all .5s;
+}
+
+@media (hover: hover) {
+  .header__logo-group:hover {
+    scale: 1.2;
+  }
 }
 
 .header__logo {
@@ -32,6 +40,17 @@
   font-size: 22px;
   font-weight: 200;
   letter-spacing: 2px;
+  transition: all 0.5s;
+}
+
+@media (hover: hover) {
+  .header__nav-link:hover {
+    color: var(--color-font-gold);
+  }
+}
+
+.header__nav-link:active {
+  color: var(--color-font-gold);
 }
 
 .header__burger {
@@ -39,6 +58,10 @@
 }
 
 @media(max-width: 1100px) {
+  .header__container {
+    height: 130px;
+  }
+
   .header__nav {
     display: none;
   }
@@ -56,7 +79,17 @@
   }
 }
 
+@media(max-width: 768px) {
+  .header__container {
+    height: 110px;
+  }
+}
+
 @media(max-width: 420px) {
+  .header__container {
+    height: 90px;
+  }
+
   .header__logo {
     width: 29px;
   }
