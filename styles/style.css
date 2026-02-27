@@ -1,4 +1,5 @@
 @import url('./header.css');
+@import url('./welcome.css');
 
 @font-face {
     font-family: 'Forum';
@@ -106,7 +107,8 @@ label {
   overflow: hidden;
 }
 
-.header {
+.header,
+.welcome__section {
   background-color: var(--color-bg-dark);
   color: var(--color-white)
 }
