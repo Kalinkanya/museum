@@ -44,7 +44,7 @@
   transition: all 0.5s;
 }
 
-.header__burger-menu {
+.header__burger-wrapper {
   display: none;
 }
 
@@ -60,6 +60,14 @@
 }
 
 .header__burger {
+  display: none;
+}
+
+.header__burger-menu__images {
+  display: none;
+}
+
+.header__burger-menu__footer {
   display: none;
 }
 
@@ -98,10 +106,8 @@
     transform: rotate(-45deg) translate(6px, -6px);
   }
 
-  .header__burger-menu {
+  .header__burger-wrapper {
     display: block;
-    padding-top: 35px;
-    padding-left: 53px;
     height: 585px;
     width: 297px;
     position: fixed;
@@ -113,21 +119,27 @@
     visibility: hidden;
     transition: all 0.5s;
     transform: translate(-150%);
+    padding-inline: 53px;
   }
 
-  .header__burger-menu.visible {
+  .header__burger-wrapper.visible {
     opacity: 1;
     visibility: visible;
     transform: translate(0);
   }
 
+  .header__burger-menu {
+    padding-top: 35px;
+  }
+
   .header__burger-menu__list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 25px;
   }
 
   .header__burger-menu__link {
+    height: 23px;
     width: 121px;
     display: flex;
     align-items: center;
@@ -141,9 +153,67 @@
   }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 940px) {
   .header__container {
     height: 110px;
+  }
+
+  .header__burger-wrapper {
+    display: flex;
+    flex-direction: column;
+    top: 110px;
+    height: calc(100vh - 110px);
+    width: 100vw;
+    gap: 30px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .header__burger-menu__images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .header__burger-menu__img:first-child {
+    width: 100%;
+  }
+
+  .header__burger-menu__img:nth-child(n+2) {
+    width: calc(50% - 10px);
+  }
+
+  .header__burger-menu__footer {
+    display: flex;
+    border-top: 1px solid #ffffff80;
+    justify-content: center;
+    align-items: center;
+    padding-block: 30px;
+  }
+
+  .header__burger-menu__footer-list {
+    display: flex;
+    gap: 20px;
+  }
+
+  .header__burger-menu__footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #666;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  @media(hover: hover) {
+    .header__burger-menu__footer-link:hover {
+      border: 1px solid #9D8665;
+      filter: brightness(0) saturate(100%) invert(59%) sepia(7%) saturate(1657%) hue-rotate(356deg) brightness(91%) contrast(82%);
+      box-shadow: 0 0 10px #9D8665;
+    }
   }
 }
 

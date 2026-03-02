@@ -1,6 +1,6 @@
 const burger = document.querySelector('.header__burger');
 const welcome_content = document.querySelector('.welcome__content');
-const burger_menu = document.querySelector('.header__burger-menu');
+const burger_menu = document.querySelector('.header__burger-wrapper');
 const burger_links = document.querySelectorAll('.header__burger-menu__link');
 const body = document.querySelector('.body');
 const overlay = document.querySelector('.overlay');
