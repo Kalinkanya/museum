@@ -175,11 +175,12 @@
     gap: 20px;
   }
 
-  .header__burger-menu__img:first-child {
+  .header__burger-menu__img:nth-child(1) {
     width: 100%;
   }
 
-  .header__burger-menu__img:nth-child(n+2) {
+  .header__burger-menu__img:nth-child(2),
+  .header__burger-menu__img:nth-child(3) {
     width: calc(50% - 10px);
   }
 
@@ -228,5 +229,34 @@
 
   .header__logo-text {
     font-size: 16px;
+  }
+
+  .header__burger-menu__footer-list {
+    display: flex;
+    gap: 5px;
+  }
+
+  .header__burger-menu__images {
+    flex-wrap: nowrap;
+  }
+
+  .header__burger-menu__img:nth-child(1),
+  .header__burger-menu__img:nth-child(2),
+  .header__burger-menu__img:nth-child(3) {
+    width: 30%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .header__burger-menu__img:nth-child(1) {
+    order: 2;
+  }
+  
+  .header__burger-menu__img:nth-child(2) {
+    order: 1;
+  }
+
+  .header__burger-menu__img:nth-child(3) {
+    order: 3;
   }
 }
