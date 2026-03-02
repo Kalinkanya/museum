@@ -101,6 +101,7 @@ label {
 
 .body {
   font-family: var(--font-base);
+  position: relative;
 }
 
 .no-scroll {
@@ -117,6 +118,20 @@ label {
   max-width: 1520px;
   margin-inline: auto;
   padding-inline: 40px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 40;
+  display: none;
+}
+
+.overlay.visible {
+  display: block;
 }
 
 @media (max-width: 1100px) {

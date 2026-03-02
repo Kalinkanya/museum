@@ -12,6 +12,12 @@
   z-index: 5;
   width: 41.53%;
   transform: translateY(-40%);
+  transition: all 0.5s;
+}
+
+.welcome__content.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .welcome__carousel-wrapper {
