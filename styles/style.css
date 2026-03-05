@@ -1,6 +1,7 @@
 @import url('./header.css');
 @import url('./welcome.css');
 @import url('./visiting.css');
+@import url('./explore.css');
 
 @font-face {
     font-family: 'Forum';
@@ -110,7 +111,8 @@ label {
 }
 
 .header,
-.welcome__section {
+.welcome__section,
+.explore__container {
   background-color: var(--color-bg-dark);
   color: var(--color-white)
 }
