@@ -127,7 +127,8 @@
 
 @media(max-width: 820px) {
   .visiting__container {
-    padding-block: 40px;
+    padding-top: 40px;
+    padding-bottom: 80px;
   }
 
   .visiting__title {
@@ -168,6 +169,10 @@
 }
 
 @media(max-width: 420px) {
+  .visiting__container {
+    padding-block: 40px;
+  }
+
   .visiting__title {
     font-size: 28px;
     line-height: 40px;
